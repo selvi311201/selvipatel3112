@@ -1,0 +1,95 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "c6db9547",
+   "metadata": {},
+   "source": [
+    "# develop a recursive function tough() that takes two nonnegative integer arguments and outputs a pattern"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "6361b187",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      " f(0,0) \n",
+      "\n",
+      "\n",
+      " f(0,1) \n",
+      "\n",
+      "*\n",
+      "\n",
+      " f(0,2)  \n",
+      "\n",
+      "*\n",
+      "**\n",
+      " *\n",
+      "\n",
+      " f(0,4) \n",
+      "\n",
+      "*\n",
+      "**\n",
+      " *\n",
+      "****\n",
+      " *\n",
+      " **\n",
+      "  *\n"
+     ]
+    }
+   ],
+   "source": [
+    "def tough (indent, num) :\n",
+    "     if(num > 0):\n",
+    "        tough (indent, num//2)           # print previous pattern\n",
+    "        print(\" \"*indent + \"*\"*num)        # print middle row of *'s\n",
+    "        tough (indent + 1, num//2)        # print previous pattern indented\n",
+    "        \n",
+    "#function call\n",
+    "print(\"\\n f(0,0) \\n\")\n",
+    "tough(0,0)\n",
+    "print(\"\\n f(0,1) \\n\")\n",
+    "tough(0,1)\n",
+    "print(\"\\n f(0,2)  \\n\")\n",
+    "tough (0,2)\n",
+    "print(\"\\n f(0,4) \\n\")\n",
+    "tough(0,4)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "d710cb3c",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.11.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
